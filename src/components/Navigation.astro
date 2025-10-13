@@ -1,0 +1,130 @@
+---
+---
+<header>
+  <nav>
+    <h3>Aldanaz</h3>
+    <div class="menu" id="menuBtn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="nav-list" id="navList">
+      <ul>
+        <li>Home</li>
+        <li>Work</li>
+        <li>Journal</li>
+        <li>Expertise</li>
+        <li>About</li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    background-color: black;
+  }
+
+  nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    position: relative;
+  }
+
+  h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-direction: column;
+    gap: 0.5rem;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .menu span {
+    width: 2rem;
+    height: 2px;
+    background-color: white;
+    transition: 0.3s ease;
+  }
+
+  /* NAV LIST HIDDEN STATE */
+  .nav-list {
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    top: 0;
+    transition: left 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    color: black;
+  }
+
+  .nav-list ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+  }
+
+  .nav-list li {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-list li:hover{
+    transform: scale(1.2);
+    text-decoration: underline;
+  }
+
+  /* NAV LIST ACTIVE STATE */
+  .nav-list.active {
+    left: 0;
+  }
+  .menu.active span{
+    background-color: black;
+  }
+
+  /* OPTIONAL: ANIMASI BURGER KE X */
+  .menu.active span:nth-child(1) {
+    width: 1.5rem;
+  }
+  .menu.active span:nth-child(3) {
+    width: 1rem;
+  }
+</style>
+
+<script defer>
+  const menuBtn = document.getElementById("menuBtn");
+  const navList = document.getElementById("navList");
+
+  menuBtn.addEventListener("click", () => {
+    menuBtn.classList.toggle("active");
+    navList.classList.toggle("active");
+  });
+</script>
+
