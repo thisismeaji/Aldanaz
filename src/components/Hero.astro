@@ -2,14 +2,14 @@
 	<div>
         <h1>Your Vision - Our Better Creation</h1>
         <p>A journey from consept to concrete</p>
-        <button> Learn More </button>
+        <button id="learnMoreBtn"> Learn More </button>
     </div>
 </section>
 
 <style>
     .hero{
         width: 100%;
-        height: 100vh;
+        height: 90vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -18,7 +18,6 @@
     .hero > div{
         max-width: 1200px;
         width: 100%;
-        height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -32,14 +31,29 @@
         font-weight: 200;
     }
 
+    p{
+        font-size: 20px;
+    }
+
     button{
-        padding: 8px 24px;
         margin-top: 16px;
         border: none;
         background-color: white;
+        transition: all 0.3s ease-in-out;
+    }
+
+    button:hover{
+        background-color: #112C57;
+        color: #F8F0E4;
     }
 
     @media screen and (max-width:786px) {
+
+        .hero{
+            height: 100%;
+            padding: 5rem 0;
+        }
+
         .hero div h1{
             font-size: 3.5em;
         }
@@ -48,3 +62,16 @@
         }
     }
 </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.getElementById("learnMoreBtn");
+    const target = document.querySelector("#introduction");
+
+    if (btn && target) {
+      btn.addEventListener("click", () => {
+        target.scrollIntoView({ behavior: "smooth" });
+      });
+    }
+  });
+</script>
