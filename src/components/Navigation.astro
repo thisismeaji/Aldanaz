@@ -29,10 +29,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 2rem;
     position: sticky;
     top: 0;
     background-color: #F8F0E4;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
   }
 
   nav {
@@ -69,7 +70,7 @@
   /* NAV LIST HIDDEN STATE */
   .nav-list {
     position: fixed;
-    background-color: white;
+    background-color: #112C57;
     width: 100%;
     height: 100%;
     left: -100%;
@@ -79,7 +80,7 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    color: black;
+    color: #F8F0E4;
   }
 
   .nav-list ul {
@@ -104,9 +105,10 @@
   /* NAV LIST ACTIVE STATE */
   .nav-list.active {
     left: 0;
+    color: #F8F0E4;
   }
   .menu.active span{
-    background-color: black;
+    background-color: #F8F0E4;
   }
 
   /* OPTIONAL: ANIMASI BURGER KE X */
