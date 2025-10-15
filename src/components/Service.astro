@@ -1,0 +1,148 @@
+<section>
+    <div>
+        <h2>Our Service</h2>
+        <p>Aldanaz is all about pushing ideas further — turning digital creativity into real impact for brands that dare to stand out.</p>
+        <ul>
+            <li>Social Media Management</li>
+            <li>Content Creative</li>
+            <li>Branding</li>
+            <li>Digital Marketing</li>
+            <li>Web Development</li>
+            <li>Digital Ads</li>
+        </ul>
+    </div>
+</section>
+
+<style>
+    section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10rem 1rem;
+    }
+
+    h2{
+        font-size: 4em;
+        text-align: center;
+        font-weight: 200;
+    }
+
+    p{
+        text-align: center;
+        margin-top: 1rem;
+        font-size: 20px;
+    }
+
+    section div {
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    ul{
+        list-style: none;
+        margin-top: 32px;
+        font-size: 20px;
+        font-weight: 500;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 1rem;
+        place-items: center;
+    }
+
+    li{
+        padding: 1rem;
+        border: 1px solid #112C57;
+        border-radius: 20px;
+        width: 100%;
+        text-align: center;
+        cursor: pointer;
+        transition: all ease-in-out 0.3s;
+    }
+
+    li:hover{
+        background-color: #112C57;
+        color: #F8F0E4;
+    }
+
+    @media screen and (max-width:786px) {
+        section{
+            padding: 5rem 1rem;
+        }
+
+        section div{
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        h2{
+            font-size: 2em;
+            text-align: left;
+        }
+        
+        ul{
+            grid-template-columns: 1fr;
+            place-items: start;
+        }
+
+        li{
+            border: none;
+            padding: 0;
+            text-align: left;
+            margin-top: 1rem;
+            position: relative;
+            width: fit-content;
+        }
+
+        li:hover{
+            background-color: #F8F0E4;
+        color: #112C57;
+        }
+
+        li:nth-of-type(1):after{
+            content: "1";
+            font-size: 14px;
+            position: absolute;
+            bottom: 15px;
+            right: -15px;
+        }
+        li:nth-of-type(2):after{
+            content: "2";
+            font-size: 14px;
+            position: absolute;
+            bottom: 15px;
+            right: -15px;
+        }
+        li:nth-of-type(3):after{
+            content: "3";
+            font-size: 14px;
+            position: absolute;
+            bottom: 15px;
+            right: -15px;
+        }
+        li:nth-of-type(4):after{
+            content: "4";
+            font-size: 14px;
+            position: absolute;
+            bottom: 15px;
+            right: -15px;
+        }
+        li:nth-of-type(5):after{
+            content: "5";
+            font-size: 14px;
+            position: absolute;
+            bottom: 15px;
+            right: -15px;
+        }
+        li:nth-of-type(6):after{
+            content: "6";
+            font-size: 14px;
+            position: absolute;
+            bottom: 15px;
+            right: -15px;
+        }
+    }
+</style>
